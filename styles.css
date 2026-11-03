@@ -1,0 +1,223 @@
+:root {
+  --ground: #ffffff;
+  --surface: #f6f5f1;
+  --border: #e9e7e0;
+  --rule: #efede8;
+  --texto: #1f201d;
+  --texto-suave: #636361;
+  --acento: #1b6e66;
+  --acento-oscuro: #15574f;
+  --radio: 16px;
+  --radio-control: 12px;
+  --fuente: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --fuente-titulo: Georgia, "Iowan Old Style", "Times New Roman", serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente);
+  background: var(--ground);
+  color: var(--texto);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.contenedor {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+}
+
+.cabecera {
+  margin-bottom: 28px;
+}
+
+.cabecera h1 {
+  font-family: var(--fuente-titulo);
+  font-size: 2.1rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.subtitulo {
+  color: var(--texto-suave);
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
+/* Racha */
+.racha {
+  padding: 32px 20px 24px;
+  text-align: center;
+  background: var(--surface);
+  border-radius: var(--radio);
+  margin-bottom: 20px;
+}
+
+.racha-marca {
+  display: inline-block;
+  color: var(--texto);
+  margin-bottom: 10px;
+}
+
+.racha-numero {
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.racha-texto {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+.racha-detalles {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+}
+
+.racha-mejor,
+.racha-semana {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.racha-semana {
+  margin-top: 4px;
+}
+
+.racha-mejor strong,
+.racha-semana strong {
+  color: var(--texto);
+  font-weight: 500;
+}
+
+/* Paneles */
+.panel {
+  background: var(--surface);
+  border-radius: var(--radio);
+  padding: 24px 20px;
+  margin-bottom: 20px;
+}
+
+.panel h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Formulario */
+.campo {
+  margin-bottom: 16px;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--texto);
+}
+
+.campo input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--texto);
+  background: var(--ground);
+  border: 1px solid var(--border);
+  border-radius: var(--radio-control);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.campo input:focus {
+  outline: none;
+  border-color: var(--acento);
+  box-shadow: 0 0 0 3px rgba(27, 110, 102, 0.14);
+}
+
+.boton {
+  width: 100%;
+  padding: 14px;
+  margin-top: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #fff;
+  background: var(--acento);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.boton:hover {
+  background: var(--acento-oscuro);
+}
+
+.boton:active {
+  transform: translateY(1px);
+}
+
+/* Lista de sesiones */
+.lista {
+  list-style: none;
+}
+
+.lista li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.lista li:last-child {
+  border-bottom: none;
+  padding-bottom: 2px;
+}
+
+.sesion-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.sesion-tema {
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sesion-fecha {
+  color: var(--texto-suave);
+  font-size: 0.8rem;
+}
+
+.sesion-minutos {
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+  color: var(--texto);
+  font-size: 0.95rem;
+}
+
+.vacio {
+  color: var(--texto-suave);
+  text-align: center;
+  padding: 24px 0 !important;
+  justify-content: center !important;
+  border-bottom: none !important;
+}
