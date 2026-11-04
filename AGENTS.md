@@ -3,7 +3,8 @@ Web estática para registrar sesiones de estudio y motivarse viendo la racha de 
 seguidos. Proyecto didáctico: el código debe poder entenderlo alguien que empieza a programar.
 ## Stack y estructura
 - HTML, CSS y JavaScript puros: sin frameworks, librerías, npm, bundler ni build.
-- `index.html` (estructura), `styles.css` (estilos), `app.js` (lógica y datos).
+- `index.html` (estructura), `styles.css` (estilos), `app.js` (interfaz y datos),
+  `logica.js` (lógica pura) y `logica.test.js` (tests de lógica con `node --test`).
 - Debe funcionar abriendo `index.html` con doble clic (`file://`): nada de módulos ES
 (`type="module"`), `fetch` a archivos locales ni nada que requiera servidor.
 ## Convenciones

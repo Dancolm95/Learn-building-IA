@@ -44,3 +44,10 @@
   resuelta: minutos = entero positivo (lo demás se ignora), fecha = día real, no existe
   borrado/edición de sesiones (solo registrar), "hoy" se recalcula al renderizar, celdas
   pasadas siempre interactivas, leyenda incluye 0 y futuro. Sin código.
+- 2026-11-04: `docs/specs/001-heat-map/tasks.md` queda en la versión QA corregida: 11 tareas
+  con checkboxes, RF por tarea, “Hecho cuando” verificable, cobertura explícita de RF-7
+  (mensaje discreto + fallo de `localStorage`), registro QA manual en el propio archivo y
+  tarea inicial para alinear `AGENTS.md` con los nuevos archivos (`logica.js`, tests).
+- 2026-11-04: Implementada solo T1 (`001-heat-map/tasks.md`): `AGENTS.md` actualizado para
+  reflejar `logica.js` y `logica.test.js` en la estructura. T1 marcada como hecha y registro
+  QA manual añadido en `tasks.md`. Ejecutado `node --test` (0 tests, 0 fallos).
