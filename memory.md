@@ -34,14 +34,13 @@
 - 2026-11-03: Aprobada `docs/constitution.md` con 6 principios (stack, spec, separación
   lógica/UI, tests sin dependencias, datos y español). Pendiente decidir si se renombra
   `toLocalDateString` para cumplir la regla de idioma.
-- 2026-11-03: Redactada la spec del mapa de calor sin tocar código: 12 semanas
-  lunes-domingo, tramos fijos 0/1-29/30-59/60-119/120+, detalle fecha/minutos; conserva
-  datos ante errores. Trasladada a `docs/specs/001-mapa-calor.md` usando el archivo vacío
-  `docs/specs/001`; la constitución ahora apunta a `docs/specs/`.
-- 2026-11-03: `AGENTS.md` alineado con la constitución: leer la spec activa en
-  `docs/specs/NNN-*.md` antes de tocar código.
-- 2026-11-03: Revisada `docs/specs/001-mapa-calor.md` como QA y corregida: se definieron
-  días transcurrido/futuro, minutos válidos y entrada defectuosa; se resolvió la
-  contradicción RF-2/RF-4 (solo días transcurridos suman) y RF-3/RF-4 (estado «futuro»
-  fuera de la leyenda); se añadieron cabeceras, detalle accesible, actualización inmediata
-  y distinción de errores (clave ausente vs no legible). Sin cambios en código.
+- 2026-11-03: Primera redacción y revisión QA de la spec del mapa de calor (entonces
+  `001-mapa-calor.md`, ya sustituida por la actual). Las specs viven en `docs/specs/`.
+- 2026-11-04: Spec del mapa de calor en `docs/specs/001-heat-map/spec.md` y plan técnico en
+  `docs/specs/001-heat-map/plan.md` (carpeta `001-heat-map/`). Decidido por preguntas: 12
+  semanas lunes→domingo, tramos fijos 0/1–30/31–90/91+ (escala monocromática teal), detalle
+  fecha/minutos al pasar y al tocar (cerrar tocando la misma u otra celda), días futuros
+  apagados, datos ausentes/corruptos → mapa vacío + mensaje sin tocar la clave. Revisión QA
+  resuelta: minutos = entero positivo (lo demás se ignora), fecha = día real, no existe
+  borrado/edición de sesiones (solo registrar), "hoy" se recalcula al renderizar, celdas
+  pasadas siempre interactivas, leyenda incluye 0 y futuro. Sin código.

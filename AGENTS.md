@@ -26,7 +26,7 @@ pero ayer sí, la racha sigue viva y se cuenta desde ayer.
 - Tests: `node --test`
 
 ##Reglas
-- Lee `docs/constitution.md` y la spec activa (`docs/specs/NNN-*.md`) antes de tocar código.
+- Lee `docs/constitution.md` y la spec activa (`docs/specs/NNN-*/spec.md`) antes de tocar código.
 ## Forma de trabajar
 - Haz solo lo que se pide: no añadas funcionalidades por tu cuenta.
 - Cambios pequeños y enfocados; no reescribas lo que ya funciona.
