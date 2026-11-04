@@ -25,3 +25,23 @@
 - 2026-11-03: Rediseño visual (estilo "editorial greeting" de tasteskill): paleta neutra
   con acento teal (#1b6e66), paneles planos sin sombras, número de racha en peso regular,
   llama dibujada en lugar del emoji. Sin cambios en los datos ni en la lógica.
+- 2026-11-03: Probado `index.html` por `file://` en Brave con Chrome DevTools (Chrome no
+  estaba instalado). Tres sesiones de 3/2/1 nov: racha y mejor racha 3; tras recargar
+  persisten, consola sin mensajes y captura móvil a 375 px sin desbordamiento. Las
+  sesiones de prueba quedan en el almacenamiento del navegador usado.
+- 2026-11-03: Captura móvil trasladada a `~/Pictures/screenshots/diario-estudio-movil-375.png`
+  a petición del usuario; usar esa carpeta para próximas capturas cuando lo solicite.
+- 2026-11-03: Aprobada `docs/constitution.md` con 6 principios (stack, spec, separación
+  lógica/UI, tests sin dependencias, datos y español). Pendiente decidir si se renombra
+  `toLocalDateString` para cumplir la regla de idioma.
+- 2026-11-03: Redactada la spec del mapa de calor sin tocar código: 12 semanas
+  lunes-domingo, tramos fijos 0/1-29/30-59/60-119/120+, detalle fecha/minutos; conserva
+  datos ante errores. Trasladada a `docs/specs/001-mapa-calor.md` usando el archivo vacío
+  `docs/specs/001`; la constitución ahora apunta a `docs/specs/`.
+- 2026-11-03: `AGENTS.md` alineado con la constitución: leer la spec activa en
+  `docs/specs/NNN-*.md` antes de tocar código.
+- 2026-11-03: Revisada `docs/specs/001-mapa-calor.md` como QA y corregida: se definieron
+  días transcurrido/futuro, minutos válidos y entrada defectuosa; se resolvió la
+  contradicción RF-2/RF-4 (solo días transcurridos suman) y RF-3/RF-4 (estado «futuro»
+  fuera de la leyenda); se añadieron cabeceras, detalle accesible, actualización inmediata
+  y distinción de errores (clave ausente vs no legible). Sin cambios en código.

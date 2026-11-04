@@ -22,12 +22,17 @@ Date("AAAA-MM-DD")`: se interpretan en UTC y desplazan el día.
 pero ayer sí, la racha sigue viva y se cuenta desde ayer.
 - Varias sesiones el mismo día cuentan como un solo día. Las fechas futuras no suman.
 - La semana empieza el lunes (lunes → domingo), para el total de minutos semanales.
+## Comandos
+- Tests: `node --test`
+
+##Reglas
+- Lee `docs/constitution.md` y la spec activa (`docs/specs/NNN-*.md`) antes de tocar código.
 ## Forma de trabajar
 - Haz solo lo que se pide: no añadas funcionalidades por tu cuenta.
 - Cambios pequeños y enfocados; no reescribas lo que ya funciona.
 - Al terminar, resume qué has cambiado y cualquier decisión que deba revisar.
 ## Límites
-- ✅ Siempre: respetar las reglas de fechas y racha, mantener los textos en español.
+✅ Siempre: respetar las reglas de fechas y racha, mantener los textos en español.
 ✅ Siempre: actualizar `memory.md` al terminar cada tarea.
 - ⚠ Pregunta antes: crear archivos nuevos, cambiar el formato de los datos guardados.
 - 🚫 Nunca: añadir dependencias, frameworks o un paso de build.
