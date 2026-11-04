@@ -31,7 +31,7 @@ cargar `logica.js` antes de `app.js` en `index.html`. En `app.js`, reemplazar lo
 `toLocalDateString` por `fechaLocal`.
 
 - **RF:** auxiliar (base de RF-1…RF-7).
-- [ ] Hecho cuando: `node --test` pasa casos de `fechaLocal`/`sumarDias` (día normal, cambio
+- [x] Hecho cuando: `node --test` pasa casos de `fechaLocal`/`sumarDias` (día normal, cambio
   de mes, cambio de año y bisiesto) y `index.html` sigue cargando sin errores de consola.
 
 ---
@@ -161,4 +161,9 @@ Completar durante la ejecución (una línea por tarea cerrada):
 - Prueba manual realizada: revisión de `AGENTS.md` para verificar que la sección de
   estructura incluye `logica.js` y `logica.test.js`, y que se mantiene la referencia
   `docs/specs/NNN-*/spec.md`.
+- Resultado: OK.
+- Fecha: 2026-11-04
+- Tarea: T2
+- Prueba manual realizada: apertura de `index.html` por `file://` tras cargar `logica.js`
+  antes de `app.js`; comprobación de consola sin errores y de valores iniciales visibles.
 - Resultado: OK.

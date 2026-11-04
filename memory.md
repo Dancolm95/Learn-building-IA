@@ -51,3 +51,8 @@
 - 2026-11-04: Implementada solo T1 (`001-heat-map/tasks.md`): `AGENTS.md` actualizado para
   reflejar `logica.js` y `logica.test.js` en la estructura. T1 marcada como hecha y registro
   QA manual añadido en `tasks.md`. Ejecutado `node --test` (0 tests, 0 fallos).
+- 2026-11-04: Implementada solo T2: creado `logica.js` con `fechaLocal` y `sumarDias` +
+  export CommonJS condicional; `index.html` ahora carga `logica.js` antes de `app.js`; en
+  `app.js` se quitaron los helpers duplicados y se cambiaron usos de `toLocalDateString` por
+  `fechaLocal`. Añadido `logica.test.js` (4 tests de fecha local, cambio de mes/año y
+  bisiesto). `node --test`: 4 pass, 0 fail.

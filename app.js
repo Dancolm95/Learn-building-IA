@@ -10,20 +10,6 @@ const mejorRacha = document.getElementById("mejorRacha");
 const minutosSemana = document.getElementById("minutosSemana");
 const listaSesiones = document.getElementById("listaSesiones");
 
-function toLocalDateString(fecha) {
-  const anio = fecha.getFullYear();
-  const mes = String(fecha.getMonth() + 1).padStart(2, "0");
-  const dia = String(fecha.getDate()).padStart(2, "0");
-  return `${anio}-${mes}-${dia}`;
-}
-
-function sumarDias(fechaStr, dias) {
-  const [anio, mes, dia] = fechaStr.split("-").map(Number);
-  const fecha = new Date(anio, mes - 1, dia);
-  fecha.setDate(fecha.getDate() + dias);
-  return toLocalDateString(fecha);
-}
-
 function formatearFecha(fechaStr) {
   const [anio, mes, dia] = fechaStr.split("-").map(Number);
   const fecha = new Date(anio, mes - 1, dia);
@@ -52,7 +38,7 @@ function guardarSesiones(sesiones) {
 
 function calcularRacha(sesiones) {
   const diasConSesion = new Set(sesiones.map((s) => s.fecha));
-  const hoy = toLocalDateString(new Date());
+  const hoy = fechaLocal(new Date());
   const ayer = sumarDias(hoy, -1);
 
   let inicio;
@@ -80,7 +66,7 @@ function mostrarRacha(sesiones) {
 }
 
 function calcularMejorRacha(sesiones) {
-  const hoy = toLocalDateString(new Date());
+  const hoy = fechaLocal(new Date());
   const dias = [...new Set(sesiones.map((s) => s.fecha))]
     .filter((f) => f <= hoy)
     .sort();
@@ -115,8 +101,8 @@ function calcularMinutosSemana(sesiones) {
   const hoy = new Date();
   const diaSemana = hoy.getDay();
   const offsetLunes = (diaSemana + 6) % 7;
-  const lunes = sumarDias(toLocalDateString(hoy), -offsetLunes);
-  const hoyStr = toLocalDateString(hoy);
+  const lunes = sumarDias(fechaLocal(hoy), -offsetLunes);
+  const hoyStr = fechaLocal(hoy);
 
   return sesiones.reduce((total, s) => {
     if (s.fecha >= lunes && s.fecha <= hoyStr) {
@@ -197,13 +183,13 @@ formSesion.addEventListener("submit", (evento) => {
   guardarSesiones(sesiones);
 
   formSesion.reset();
-  inputFecha.value = toLocalDateString(new Date());
+  inputFecha.value = fechaLocal(new Date());
   inputTema.focus();
 
   renderizar();
 });
 
-const hoy = toLocalDateString(new Date());
+const hoy = fechaLocal(new Date());
 inputFecha.value = hoy;
 inputFecha.max = hoy;
 
