@@ -54,6 +54,27 @@
       <h2>Mis sesiones</h2>
       <ul class="lista" id="listaSesiones"></ul>
     </section>
+
+    <section class="panel panel-mapa">
+      <h2>Mapa de calor (12 semanas)</h2>
+      <p class="mapa-total" id="totalMapa">Total (12 semanas): <strong>0 min</strong></p>
+
+      <div class="mapa-cabecera" aria-hidden="true">
+        <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span>
+      </div>
+
+      <div class="mapa-cuadrilla" id="cuadrillaMapa" aria-label="Mapa de calor de estudio"></div>
+      <p class="mapa-detalle" id="detalleMapa" hidden></p>
+      <p class="mapa-mensaje" id="mensajeMapa" hidden></p>
+
+      <div class="mapa-leyenda" aria-label="Leyenda del mapa">
+        <span class="leyenda-item"><i class="muestra muestra-0"></i> Sin estudio (0)</span>
+        <span class="leyenda-item"><i class="muestra muestra-1"></i> 1-30 min</span>
+        <span class="leyenda-item"><i class="muestra muestra-2"></i> 31-90 min</span>
+        <span class="leyenda-item"><i class="muestra muestra-3"></i> 91+ min</span>
+        <span class="leyenda-item"><i class="muestra muestra-futuro"></i> Futuro</span>
+      </div>
+    </section>
   </main>
 
   <script src="logica.js"></script>

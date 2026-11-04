@@ -56,3 +56,11 @@
   `app.js` se quitaron los helpers duplicados y se cambiaron usos de `toLocalDateString` por
   `fechaLocal`. Añadido `logica.test.js` (4 tests de fecha local, cambio de mes/año y
   bisiesto). `node --test`: 4 pass, 0 fail.
+- 2026-11-04: Implementadas T3–T10 del mapa de calor. `logica.js` ahora concentra lógica
+  pura (racha, mejor racha, minutos semana, validación de sesiones, semanas, tramos,
+  construcción del mapa y total del periodo, todo con fechas locales). `app.js` queda como
+  capa de interfaz/datos: lectura robusta de `localStorage` (ausente/corrupto/sin acceso),
+  pintado del mapa, leyenda, total, mensaje discreto y detalle por interacción. `index.html`
+  incluye la sección del mapa y `styles.css` los estilos de tramos/futuro/responsive.
+  `logica.test.js` sube a 17 tests; `node --test`: 17 pass, 0 fail. Pendiente T11: validación
+  visual manual completa en navegador.

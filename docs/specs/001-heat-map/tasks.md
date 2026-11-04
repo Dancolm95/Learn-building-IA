@@ -43,7 +43,7 @@ Mover a `logica.js` las funciones puras ya existentes relacionadas con fechas/ra
 ellas), dejando `app.js` como capa de UI (leer datos, invocar lógica y pintar).
 
 - **RF:** — (cumplimiento de constitución, regla 3).
-- [ ] Hecho cuando: al abrir `index.html`, racha actual, mejor racha y minutos semanales dan
+- [x] Hecho cuando: al abrir `index.html`, racha actual, mejor racha y minutos semanales dan
   los mismos valores que antes con el mismo conjunto de sesiones.
 
 ---
@@ -54,7 +54,7 @@ Implementar en `logica.js`: `esFechaValida`, `sonMinutosValidos` y `filtrarSesio
 según la sección “Validez de una sesión” de la spec. Añadir tests.
 
 - **RF:** RF-7.
-- [ ] Hecho cuando: `node --test` cubre y pasa los casos de fecha inválida/imposible,
+- [x] Hecho cuando: `node --test` cubre y pasa los casos de fecha inválida/imposible,
   minutos no válidos (`0`, negativos, decimales, no numéricos, `NaN`, `Infinity`) y arrays
   mixtos con entradas no-objeto.
 
@@ -66,7 +66,7 @@ Implementar en `logica.js`: `lunesDeSemana`, `generarSemanas`, `agruparMinutosPo
 `asignarTramo`. Añadir tests.
 
 - **RF:** RF-1, RF-2, RF-3.
-- [ ] Hecho cuando: `node --test` confirma 12 semanas (84 fechas), semanas lunes→domingo,
+- [x] Hecho cuando: `node --test` confirma 12 semanas (84 fechas), semanas lunes→domingo,
   suma correcta por día y tramos `0 / 1–30 / 31–90 / 91+`.
 
 ---
@@ -77,7 +77,7 @@ Implementar en `logica.js`: `construirMapa` y `calcularTotalPeriodo`. Añadir te
 futuros, fuera de ventana, inválidos y total filtrado por ventana+hoy.
 
 - **RF:** RF-1, RF-2, RF-3, RF-4, RF-6, RF-7.
-- [ ] Hecho cuando: `node --test` valida que `construirMapa` devuelve 84 celdas con `esFuturo`
+- [x] Hecho cuando: `node --test` valida que `construirMapa` devuelve 84 celdas con `esFuturo`
   correcto y que `calcularTotalPeriodo` excluye futuras/invalidas y devuelve `0` sin datos.
 
 ---
@@ -89,7 +89,7 @@ Añadir sección del mapa con: título, contenedor de cuadrícula, leyenda compl
 sin sesiones/datos no legibles.
 
 - **RF:** RF-4, RF-6, RF-7.
-- [ ] Hecho cuando: al abrir `index.html` se ve la sección del mapa con leyenda completa,
+- [x] Hecho cuando: al abrir `index.html` se ve la sección del mapa con leyenda completa,
   total y zona de mensaje, sin errores de consola.
 
 ---
@@ -110,7 +110,7 @@ Datos fijos para verificación manual de esta tarea:
 Resultado esperado del total: **140 min** (solo A+B+C).
 
 - **RF:** RF-1, RF-2, RF-4, RF-6, RF-7.
-- [ ] Hecho cuando: con esos datos, el total mostrado es 140 min, Día D no suma, la página no
+- [x] Hecho cuando: con esos datos, el total mostrado es 140 min, Día D no suma, la página no
   se rompe si falla `localStorage`, y el mensaje discreto aparece en ausencia/corrupción sin
   reescribir la clave.
 
@@ -123,7 +123,7 @@ ocultar al salir; en táctil, tocar la misma celda cierra y tocar otra cambia el
 celdas futuras no muestran detalle.
 
 - **RF:** RF-5, RF-4.
-- [ ] Hecho cuando: se cumplen los comportamientos de hover/táctil definidos en spec y las
+- [x] Hecho cuando: se cumplen los comportamientos de hover/táctil definidos en spec y las
   celdas futuras no reaccionan.
 
 ---
@@ -134,7 +134,7 @@ En `styles.css`, aplicar cuadrícula 12×7, estados visuales (`sin estudio`, tra
 `futuro`), estilos de leyenda y detalle, y ajuste responsive a 375 px sin desbordamiento.
 
 - **RF:** RF-3, RF-4, RF-5.
-- [ ] Hecho cuando: a 375 px no hay scroll horizontal y los estados visuales se distinguen
+- [x] Hecho cuando: a 375 px no hay scroll horizontal y los estados visuales se distinguen
   claramente (incluyendo futuro apagado).
 
 ---
@@ -167,3 +167,14 @@ Completar durante la ejecución (una línea por tarea cerrada):
 - Prueba manual realizada: apertura de `index.html` por `file://` tras cargar `logica.js`
   antes de `app.js`; comprobación de consola sin errores y de valores iniciales visibles.
 - Resultado: OK.
+- Fecha: 2026-11-04
+- Tarea: T3-T6
+- Prueba manual realizada: validación por `node --test` de lógica pura movida a `logica.js`
+  (racha, mejor racha, minutos semana, validación de sesiones, semanas, tramos, mapa y total).
+- Resultado: OK (17/17 tests en verde).
+- Fecha: 2026-11-04
+- Tarea: T7-T10
+- Prueba manual realizada: implementación de sección de mapa, pintado, detalle interactivo y
+  estilos responsive según spec; validación estática de marcado y clases en `index.html`+
+  `styles.css`.
+- Resultado: OK en implementación; verificación visual manual completa pendiente en navegador.
